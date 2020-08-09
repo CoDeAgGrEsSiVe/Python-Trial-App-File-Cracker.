@@ -1,0 +1,48 @@
+import os
+import sys
+import time
+
+class file_cracker:
+    def __init__(self):
+        self.cracker = os.curdir
+        self.cracker_statement = sys.stdout.write("Loading codeaggressive cracker...\nFile cracking in Progress"+"\n"*2)
+        exec("time.sleep(5)")
+        self.current_dir = os.getcwd()
+        self.get_cracker_details = os.stat(self.current_dir).st_mode
+        self.temp = os.listdir(self.current_dir+"/AppData/Local/Temp")
+        self.list_dir = os.listdir(self.current_dir)
+        self.walk = os.walk(self.current_dir)
+        for path, directory, file in self.walk:
+            exec("print('Path: ', path)")
+            exec("print('Directories: ', directory)")
+            exec("print('Files: ', file)")
+            exec("print()")
+            if ".aaa" in path:
+                os.removedirs(self.current_dir+"/.aaa")
+                exec("print('File Path Deleted Successfully')")
+                exec("print()")
+                exec("time.sleep(3)")
+                exec("print('Below Is The Current Directory Folder')\n")
+                exec("print(os.listdir(os.getcwd()))")
+                exec("print()")
+                exec("print('Deleting Temp Files')")
+                exec("time.sleep(5)")
+                exec("print()")
+                break
+        for Tempfiles in self.temp:
+            exec("print('Temp_files:', Tempfiles)")
+            exec("print()")
+            exec("print('Temp Deleted')")
+            # os.removedirs(Tempfiles)
+        exec("print()")
+        exec("print('Temp files Deleted Successfully')")
+time1 = time.time()
+call_file_cracker = file_cracker()
+exec('call_file_cracker.list_dir')
+exec("(print(), '*3')")
+exec("print()")
+time2 = time.time()            
+exec("print('Progress took', str(time2-time1), 'to complete')")
+
+# C:\WINDOWS\regedit.exe
+# Computer\HKEY_CURRENT_USER\Software
